@@ -1,0 +1,37 @@
+write a java program sum of the prime numbers upto given number using do while loop
+package java_programs;
+
+import java.util.Scanner;
+
+public class Sum_of_the_prime_numbers_upto_given_number_using_do_while_loop {
+
+	public static boolean isPrime(int num) {
+		int cnt=0;
+		for(int i=2;i<=num/2;i++) {
+			if(num%i==0) {
+				cnt++;
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a given number : ");
+		int spe_num=s.nextInt();
+		int num=2;
+		int sum=0;
+		do{
+			if(isPrime(num)) {
+				sum=sum+num;
+			}
+			num++;
+		}while(num<=spe_num);
+                           
+System.out.println("Sum of prime numbers upto give number : "+sum);
+	}
+
+}
