@@ -1,0 +1,26 @@
+.Write a java program remove duplicates in a string ,and string contains alphanumeric also
+package java_programs;
+
+import java.util.Scanner;
+
+public class Remove_duplicates_in_a_string_it_contains_alphanumaric_also {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		String str=s.nextLine();
+		boolean a[]=new boolean[256];
+		
+		StringBuilder ans=new StringBuilder();
+		for(int i=0;i<str.length();i++) {
+			char ch=str.charAt(i);
+			if(a[ch]==false) {
+				ans.append(ch);
+				a[ch]=true;
+			}
+		}
+		System.out.println("remove duplicates in an string : "+ans.toString());
+		
+
+	}
+
+}
