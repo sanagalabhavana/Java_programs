@@ -1,0 +1,23 @@
+package java_programs;
+
+public class Main_method_overloading_example {
+	public static void main(String name) {
+		System.out.println(name);
+	}
+	public static void main(boolean val) {
+		if(val) {
+			System.out.println("true");
+		}
+	}
+	public static void main(int num) {
+		System.out.println(num);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to java!!!!");
+		Main_method_overloading_example.main("Bhavana");
+		Main_method_overloading_example.main(true);
+		Main_method_overloading_example.main(2004);
+	}
+
+}
