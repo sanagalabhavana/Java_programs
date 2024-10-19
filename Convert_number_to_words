@@ -1,0 +1,70 @@
+package java_programs;
+
+import java.util.Scanner;
+
+public class Convert_number_to_words {
+	public static void number_word(int num) {
+		String number=Integer.toString(num);
+		if(number.length()<1 || number.length()>4) {
+			System.out.println("Invalid");
+			return;
+		}else {
+			int num1=Integer.parseInt(number);
+			int d1=num1%10;
+			int a=num1/10;
+			int d2=a%10;
+			int b=num1/100;
+			int d3=b%10;
+			int d4=num1/1000;
+			
+			String SD[]= {"","one","two","three","four","five","six","seven","eight","nine"};
+			String TD[]={" ","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
+			String TM[]= {"","ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
+			String h="hundred";
+			String t="thousand";
+			
+			if(num1>=1 && num1<=9) {
+				System.out.println(SD[num1]);
+			}else {
+				if(num1>=10 && num1<=19) {
+					System.out.println(TD[d1+d2]);
+				}else if(num1>=20 && num1<=99 ) {
+					System.out.println(TM[d2]+" "+SD[d1]);
+				}else if(num1>=100 && num1<=999) {
+					System.out.print(SD[d3]+" "+h);
+					if(d2==1) {
+						System.out.print(" "+TD[d1+d2]);
+					}else {
+						System.out.print(" "+TM[d2]+" "+SD[d1]);
+					}
+				}else if(num1>=1000 && num1<=9999) {
+					System.out.print(SD[d4]+" "+t);
+					if(d3==0) {
+						if(d2==1) {
+							System.out.print(" "+TD[d1+d2]);
+						}else {
+							System.out.print(" "+TM[d2]+" "+SD[d1]);
+						}
+					}
+					else {
+						System.out.print(" "+SD[d3]+" "+h);
+						if(d2==1) {
+							System.out.print(" "+TD[d1+d2]);
+						}else {
+							System.out.print(" "+TM[d2]+" "+SD[d1]);
+						}
+					}
+				}	
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int num=s.nextInt();
+		number_word(num);
+		
+
+	}
+
+}
