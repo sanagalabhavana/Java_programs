@@ -1,0 +1,30 @@
+package java_programs;
+
+class P{
+	void wish() {
+		System.out.println("good morning");
+	}
+}
+class Child1 extends P{
+	void name1() {
+		System.out.println(" bhavana");
+	}
+}
+class Child2 extends P{
+	void name2() {
+		System.out.println(" chinni");
+	}
+}
+public class Hierachical_inher_example {
+
+	public static void main(String[] args) {
+		Child1 c=new Child1();
+		c.wish();
+		c.name1();
+		Child2 c2=new Child2();
+		c.wish();
+		c2.name2();
+
+	}
+
+}
