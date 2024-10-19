@@ -1,0 +1,28 @@
+write a java program to search a given number in array
+package java_programs;
+
+import java.util.Scanner;
+
+public class Search_element_in_array {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int a[]= {5,6,3,7,1,2};
+		System.out.println("Enter a searching element :");
+		int num=s.nextInt();
+		int cnt=0;
+		for(int i=0;i<a.length;i++) {
+			if(a[i]==num) {
+				cnt++;
+				break;
+	}
+		}
+		if(cnt==1) {
+			System.out.println(num+" is found");
+		}else {
+			System.out.println(num+" is not found");
+		}
+
+	}
+
+}
