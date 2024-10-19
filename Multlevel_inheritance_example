@@ -1,0 +1,29 @@
+package java_programs;
+
+class C1{
+	void wish() {
+		System.out.println("good");
+	}
+}
+class C2 extends C1{
+	void wish1() {
+		System.out.println("   morning");
+	}
+}
+class C3 extends C2{
+	void wish2() {
+		System.out.println("         bhavana ");
+	}
+}
+
+public class Multlevel_inheritance_example {
+
+	public static void main(String[] args) {
+		C3 c=new C3();
+		c.wish();
+		c.wish1();
+		c.wish2();
+
+	}
+
+}
