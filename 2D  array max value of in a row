@@ -1,0 +1,32 @@
+int 2D  array max value of in a row
+package java_programs;
+
+import java.util.Scanner;
+
+public class In_2D_array_Max_Value_in_a_row {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter number of rows :");
+		int r=s.nextInt();
+		System.out.println("Enter number of columns :");
+		int c=s.nextInt();
+		int a[][]=new int[r][c];
+		for(int i=0;i<r;i++) {
+			for(int j=0;j<c;j++) {
+				a[i][j]=s.nextInt();
+			}
+		}
+		int max=0;
+		for(int i=0;i<r;i++) {
+			int cnt=0;
+			for(int j=0;j<c;j++) {
+				cnt+=a[i][j];
+			}
+			max=Math.max(max, cnt);
+		  }
+		System.out.println(max);
+		
+		}
+	}
+
