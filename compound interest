@@ -1,0 +1,20 @@
+find compound interest in java
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter a principal component :");
+        double p=s.nextDouble();
+        System.out.println("Enter a rate :");
+        double r=s.nextDouble();
+        System.out.println("Enter a time span :");
+        double t=s.nextDouble();
+        
+        double SI=(p*r*t)/100;
+        double CI=p*Math.pow(1+r/100,t);
+        System.out.println("Compund Interest is :"+CI);
+        System.out.println("Simple Interest is :"+SI);
+        
+        
+    }
+}
