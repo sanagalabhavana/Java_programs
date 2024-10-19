@@ -1,0 +1,23 @@
+package java_programs;
+class A1{
+	int a=45;
+	void add() {
+		System.out.println(a);
+	}
+}
+class B1 extends A1{
+	int a=65;
+	void add() {
+		System.out.println(a);
+	}
+}
+
+public class Method_override_exam {
+
+	public static void main(String[] args) {
+		B1 b=new B1();
+		b.add();
+
+	}
+
+}
