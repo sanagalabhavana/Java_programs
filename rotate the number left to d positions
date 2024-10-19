@@ -1,0 +1,28 @@
+write a java program to rotate the number left to d positions
+package java_programs;
+
+import java.util.Scanner;
+
+public class write_a_java_program_to_rotate_the_number_left_to_d_positions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a given number :");
+		int number=s.nextInt();
+		String num=Integer.toString(number);
+		System.out.println("Enter the d positions : ");
+		int d=s.nextInt();
+		StringBuilder ans=new StringBuilder();
+		int j=0;
+		for(int i=d;i<num.length();i++) {
+			ans.append(num.charAt(i));
+		}
+		for(int i=0;i<d;i++) {
+			ans.append(num.charAt(i));
+		}
+		System.out.println("D position left rotated string is: "+ans);
+
+	}
+
+}
