@@ -1,0 +1,34 @@
+Amstrong Number 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code on\
+import java.util.Scanner;
+
+
+public class main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter a number :");
+        int num=s.nextInt();
+        int m=num;
+        int digit=0;
+        while(m!=0){
+            int r=m%10;
+            digit++;
+            m=m/10;
+        }
+        double sum=0;
+        int num1=num;
+        while(num!=0){
+            int r=num%10;
+            sum=sum + Math.pow(r,digit);
+            num=num/10;
+        }
+        if(sum==num1){
+            System.out.println(num1+" "+"Amstrong number");
+        }else{
+            System.out.println(num1+" "+"not an Amstrong number");
+        }
+        
+    }
+}
