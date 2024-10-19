@@ -1,0 +1,30 @@
+write a java program to replace 0's and 1's in number
+
+package java_programs;
+
+import java.util.Scanner;
+
+public class Write_a_java_program_to_replace_0s_and_1s_in_number {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int num=s.nextInt();
+		String number=Integer.toString(num);
+		//String number=s.nextLine();
+		System.out.println("Given number is : "+number);
+		StringBuilder ans=new StringBuilder();
+		for(int i=0;i<number.length();i++) {
+			char ch=number.charAt(i);
+			if(ch=='0') {
+				ans.append('1');
+			}else if(ch=='1') {
+				ans.append('0');
+			}else {
+				ans.append(ch);
+			}
+		}
+		System.out.println("Replaced 0's and 1's is : "+ans);
+
+	}
+
+}
